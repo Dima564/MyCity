@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/dima/Workspace/MyCity/app/build/intermediates/pre-dexed/debug/classes-d2463e9fda613ac18d9786760df4e5247e98c233.jar"
+        jar="/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/MyCity.libraries/facebook/unspecified/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="814769695d9e03efbc839a431c643480254a6672"/>
+    <item
+        dex="/home/dima/Workspace/MyCity/app/build/intermediates/pre-dexed/debug/classes-092da3ee9b633e4428e2894074a9d3774645f808.jar"
+        jar="/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/MyCity.libraries/slidingmenu/unspecified/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="0d00013bb998de8693d69408ea560cd27545324a"/>
+    <item
+        dex="/home/dima/Workspace/MyCity/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-cbe0ce82451d80a060ac05760dd52977d35309a1.jar"
+        jar="/opt/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+    <item
+        dex="/home/dima/Workspace/MyCity/app/build/intermediates/pre-dexed/debug/Parse-1.5.1-d75d0fff0a806c7b070e1ac2a6499298d4b7a96a.jar"
+        jar="/home/dima/Workspace/MyCity/app/libs/Parse-1.5.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3d645417e7780d44f32e29a3ec6b729b75aef26c"/>
+    <item
+        dex="/home/dima/Workspace/MyCity/app/build/intermediates/pre-dexed/debug/bolts-6531cca95913b25423ca4fcce88e2378689460b3.jar"
+        jar="/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/MyCity.libraries/facebook/unspecified/libs/bolts.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="1e5ba33c837d05dcca9dc40a0ab458f8599d7aef"/>
+    <item
+        dex="/home/dima/Workspace/MyCity/app/build/intermediates/pre-dexed/debug/picasso-2.3.2-d284e7c65d23fa9139b93a34d5511d74763f03f2.jar"
+        jar="/home/dima/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.3.2/d6b7f0093cec6c9faf65dbfd6a6a345d0ed25e27/picasso-2.3.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="d6b7f0093cec6c9faf65dbfd6a6a345d0ed25e27"/>
+    <item
+        dex="/home/dima/Workspace/MyCity/app/build/intermediates/pre-dexed/debug/classes-441e455f11f0a56862bc437d25a2ae1a30e77ddb.jar"
+        jar="/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.2.42/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e5f81129dfb3d02df80126512bc98278ed2bb40a"/>
+
+</pre-dex-items>

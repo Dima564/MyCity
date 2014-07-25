@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My City</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_id">1426631830959901</string>
+    <string name="login">Login</string>
+    <string name="add_trouble">Add trouble</string>
+
+</resources>
