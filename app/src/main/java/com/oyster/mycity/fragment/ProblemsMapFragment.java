@@ -9,6 +9,7 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.oyster.mycity.activity.MainActivity;
 
 /**
  * Created by dima on 25.07.14.
@@ -39,16 +40,7 @@ public class ProblemsMapFragment extends MapFragment{
         mapView.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
             @Override
             public void onMapLongClick(LatLng latLng) {
-                MarkerOptions marker = new MarkerOptions();
-                marker.position(latLng);
-                marker.title("Hello");
-                mapView.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-                    @Override
-                    public boolean onMarkerClick(Marker marker) {
-                        return false;
-                    }
-                });
-                mapView.addMarker(marker);
+                ((MainActivity)getActivity()).addProblem(latLng);
             }
         });
     }

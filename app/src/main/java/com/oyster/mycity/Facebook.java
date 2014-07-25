@@ -33,14 +33,9 @@ public class Facebook {
 
     }
 
-    public static void logout(Context context) {
-        clearData(context);
+    public static void logout() {
         ParseUser.logOut();
         Session session = Session.getActiveSession();
         session.closeAndClearTokenInformation();
-    }
-
-    private static void clearData(Context context) {
-
     }
 }

@@ -16,10 +16,10 @@ import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 * Created by dima on 29.06.14.
 */
 public class LeftMenu {
-    public static final int ITEM_CARDS = 0;
-    public static final int ITEM_SCAN = 1;
-    public static final int ITEM_PROMO_EVENTS = 2;
-    public static final int ITEM_PLACES = 3;
+    public static final int ITEM_MAP = 0;
+    public static final int ITEM_PROBLEMS = 1;
+    public static final int ITEM_BOOKMARKS = 2;
+    public static final int ITEM_MESSAGES = 3;
     public static final int ITEM_EXIT = 4;
     private static final String TAG = "LeftMenu";
 
@@ -91,31 +91,30 @@ public class LeftMenu {
             ImageView icon = (ImageView) convertView.findViewById(R.id.item_icon);
             TextView title = (TextView) convertView.findViewById(R.id.item_title);
 
-//            switch (position) {
-//                case ITEM_CARDS:
-//                    title.setText(R.string.cards);
-//                    icon.setImageResource(android.R.drawable.sym_contact_card);
-//                    break;
-//                case ITEM_SCAN:
-//                    title.setText(R.string.scan_button);
-//                    icon.setImageResource(android.R.drawable.ic_menu_camera);
-//                    break;
-//                case ITEM_PROMO_EVENTS:
-//                    title.setText(R.string.promo_events);
-//                    icon.setImageResource(android.R.drawable.ic_menu_myplaces);
-//                    break;
-//                case ITEM_PLACES:
-//                    title.setText(R.string.places);
-//                    icon.setImageResource(android.R.drawable.ic_dialog_map);
-//                    break;
-//                case ITEM_EXIT:
-//                    title.setText(R.string.exit);
-//                    icon.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
-//                    break;
-//                default:
-//                    icon.setImageResource(R.drawable.done);
-//                    title.setText("Default menu item");
-//            }
+            switch (position) {
+                case ITEM_MAP:
+                    title.setText(R.string.map);
+                    icon.setImageResource(android.R.drawable.ic_dialog_map);
+                    break;
+                case ITEM_PROBLEMS:
+                    title.setText(R.string.problems);
+                    icon.setImageResource(android.R.drawable.ic_menu_myplaces);
+                    break;
+                case ITEM_BOOKMARKS:
+                    title.setText(R.string.bookmarks);
+                    icon.setImageResource(android.R.drawable.star_on);
+                    break;
+                case ITEM_MESSAGES:
+                    title.setText(R.string.government_messages);
+                    icon.setImageResource(android.R.drawable.ic_dialog_map);
+                    break;
+                case ITEM_EXIT:
+                    title.setText(R.string.exit);
+                    icon.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
+                    break;
+                default:
+                    title.setText("Default menu item");
+            }
             return convertView;
         }
 

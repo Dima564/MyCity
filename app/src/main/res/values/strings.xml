@@ -7,5 +7,12 @@
     <string name="app_id">1426631830959901</string>
     <string name="login">Login</string>
     <string name="add_trouble">Add trouble</string>
+    <string name="exit">Log out</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="problems">Problems</string>
+    <string name="map">Map</string>
+    <string name="government_messages">Government messages</string>
+    <string name="title">Title</string>
+    <string name="desctiption">Description</string>
 
 </resources>

@@ -199,8 +199,12 @@
     <string name="auth_client_needs_installation_title">      An application requires installation of Google Play Services.</string>
     <string name="auth_client_needs_update_title">      An application requires an update for Google Play Services.</string>
     <string name="auth_client_play_services_err_notification_msg">Google Play services error</string>
-    <string name="auth_client_requested_by_msg">Requested by  <ns1:g id="app_name">%1$s</ns1:g></string>
+    <string name="auth_client_requested_by_msg">Requested by <ns1:g id="app_name">%1$s</ns1:g></string>
     <string name="auth_client_using_bad_version_title">      An application attempted to use a bad version of Google Play Services.</string>
+    <!-- From: file:/home/dima/Workspace/MyCity/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="bookmarks">Bookmarks</string>
     <!-- From: file:/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/MyCity.libraries/facebook/unspecified/res/values/values.xml -->
     <eat-comment />
 
@@ -256,8 +260,14 @@
     <!-- From: file:/home/dima/Workspace/MyCity/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
+    <string name="desctiption">Description</string>
+    <string name="exit">Log out</string>
+    <string name="government_messages">Government messages</string>
     <string name="hello_world">Hello world!</string>
     <string name="login">Login</string>
+    <string name="map">Map</string>
+    <string name="problems">Problems</string>
+    <string name="title">Title</string>
     <!-- From: file:/home/dima/Workspace/MyCity/app/src/main/res/values/styles.xml -->
     <eat-comment />
 

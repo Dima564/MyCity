@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merger version="2" >
 
+    <dataSet config="unspecified" >
+        <source path="/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/MyCity.libraries/slidingmenu/unspecified/assets" />
+    </dataSet>
+    <dataSet config="unspecified" >
+        <source path="/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/MyCity.libraries/facebook/unspecified/assets" />
+    </dataSet>
     <dataSet config="main" >
         <source path="/home/dima/Workspace/MyCity/app/src/main/assets" />
     </dataSet>
