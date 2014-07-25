@@ -32,6 +32,7 @@
     <eat-comment />
 
     <color name="golden">#DAA520</color>
+    <color name="green">#008000</color>
     <color name="side_menu">#636363</color>
     <!-- From: file:/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.2.42/res/values/ads_attrs.xml -->
     <eat-comment />
@@ -267,7 +268,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="login">Login</string>
     <string name="map">Map</string>
+    <string name="no_rating">No rating</string>
     <string name="problems">Problems</string>
+    <string name="send">Send</string>
+    <string name="short_title">Title is too short!</string>
     <string name="title">Title</string>
     <!-- From: file:/home/dima/Workspace/MyCity/app/src/main/res/values/styles.xml -->
     <eat-comment />

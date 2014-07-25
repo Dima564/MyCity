@@ -6,7 +6,7 @@
         jar="/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/MyCity.libraries/facebook/unspecified/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="e7c34e08b4454e98b260f3e4e122635647aa049f"/>
+        sha1="951fe3687353d8b177d57179194fd5e581b0f2ee"/>
     <item
         dex="/home/dima/Workspace/MyCity/app/build/intermediates/pre-dexed/debug/Parse-1.5.1-d75d0fff0a806c7b070e1ac2a6499298d4b7a96a.jar"
         jar="/home/dima/Workspace/MyCity/app/libs/Parse-1.5.1.jar"
@@ -24,7 +24,7 @@
         jar="/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/MyCity.libraries/slidingmenu/unspecified/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="50597a33d93974f132986c1fe145cb2b1df53ba9"/>
+        sha1="d8c40c679bced2b510bda8e926107c1814f954a9"/>
     <item
         dex="/home/dima/Workspace/MyCity/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-cbe0ce82451d80a060ac05760dd52977d35309a1.jar"
         jar="/opt/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"

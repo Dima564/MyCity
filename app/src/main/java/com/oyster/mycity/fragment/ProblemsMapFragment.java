@@ -37,6 +37,7 @@ public class ProblemsMapFragment extends MapFragment{
         });
         mapView.addMarker(marker);
 
+
         mapView.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
             @Override
             public void onMapLongClick(LatLng latLng) {

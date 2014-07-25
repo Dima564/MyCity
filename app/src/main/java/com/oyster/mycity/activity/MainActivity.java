@@ -92,6 +92,7 @@ public class MainActivity extends Activity implements LeftMenu.MenuCallbacks, Ne
     public void addProblem(LatLng location) {
         NewProblemDialogFragment newProblemDialogFragment = new NewProblemDialogFragment();
         newProblemDialogFragment.setCallbacks(this);
+        newProblemDialogFragment.setLocation(location);
         newProblemDialogFragment.show(getFragmentManager(), DIALOG_TAG);
     }
 

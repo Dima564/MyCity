@@ -15,5 +15,8 @@
     <string name="title">Title</string>
     <string name="desctiption">Description</string>
     <string name="dialog_title">Report problem</string>
+    <string name="short_title">Title is too short!</string>
+    <string name="no_rating">No rating</string>
+    <string name="send">Send</string>
 
 </resources>
