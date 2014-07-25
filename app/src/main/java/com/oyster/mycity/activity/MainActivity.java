@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.oyster.mycity.Facebook;
@@ -30,7 +29,6 @@ public class MainActivity extends Activity implements LeftMenu.MenuCallbacks, Ne
     private static final String TAG = "MainActivity";
     private static final String DIALOG_TAG = "dialog";
     String mCurrentPhotoPath;
-    NewProblemDialogFragment mNewProblemDialog;
 
 
     @Override
@@ -59,7 +57,6 @@ public class MainActivity extends Activity implements LeftMenu.MenuCallbacks, Ne
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            if (mNewProblemDialog != null)
                 ((NewProblemDialogFragment)getFragmentManager().findFragmentByTag(DIALOG_TAG))
                         .setThumbnail(imageBitmap);
         }
@@ -93,16 +90,11 @@ public class MainActivity extends Activity implements LeftMenu.MenuCallbacks, Ne
 
 
     public void addProblem(LatLng location) {
-        mNewProblemDialog = new NewProblemDialogFragment();
-        mNewProblemDialog.setCallbacks(this);
-        new NewProblemDialogFragment().show(getFragmentManager(), "dialog");
+        NewProblemDialogFragment newProblemDialogFragment = new NewProblemDialogFragment();
+        newProblemDialogFragment.setCallbacks(this);
+        newProblemDialogFragment.show(getFragmentManager(), DIALOG_TAG);
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d(TAG,"onDestroy");
-    }
 
     @Override
     public void addProblem(String title, String description, Bitmap thumbnail) {

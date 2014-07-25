@@ -688,13 +688,14 @@ containing a value of this type.
         public static final int common_signin_button_text=0x7f080037;
         public static final int common_signin_button_text_long=0x7f080038;
         public static final int desctiption=0x7f080039;
-        public static final int exit=0x7f08003a;
-        public static final int government_messages=0x7f08003b;
-        public static final int hello_world=0x7f08003c;
-        public static final int login=0x7f08003d;
-        public static final int map=0x7f08003e;
-        public static final int problems=0x7f08003f;
-        public static final int title=0x7f080040;
+        public static final int dialog_title=0x7f08003a;
+        public static final int exit=0x7f08003b;
+        public static final int government_messages=0x7f08003c;
+        public static final int hello_world=0x7f08003d;
+        public static final int login=0x7f08003e;
+        public static final int map=0x7f08003f;
+        public static final int problems=0x7f080040;
+        public static final int title=0x7f080041;
     }
     public static final class style {
         /**  Customize your theme here. 

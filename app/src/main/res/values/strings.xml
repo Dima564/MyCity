@@ -14,5 +14,6 @@
     <string name="government_messages">Government messages</string>
     <string name="title">Title</string>
     <string name="desctiption">Description</string>
+    <string name="dialog_title">Report problem</string>
 
 </resources>

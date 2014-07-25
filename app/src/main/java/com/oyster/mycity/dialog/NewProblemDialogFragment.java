@@ -1,13 +1,14 @@
 package com.oyster.mycity.dialog;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 
@@ -48,11 +49,10 @@ public class NewProblemDialogFragment extends DialogFragment {
         if (thumbnailImageView != null)
             thumbnailImageView.setImageBitmap(thumbnail);
     }
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Log.d(TAG, "onCreateView : " + this );
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
 
+        LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.dialog_new_problem, null);
         titleEditText = (EditText) view.findViewById(R.id.title_edittext);
         descriptionEditText = (EditText) view.findViewById(R.id.description_edittext);
@@ -67,43 +67,26 @@ public class NewProblemDialogFragment extends DialogFragment {
             }
         });
 
-        return view;
+
+        return new AlertDialog.Builder(getActivity())
+                .setTitle("title")
+                .setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                // do something...
+                            }
+                        }
+                )
+                .setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                dialog.dismiss();
+                            }
+                        }
+                )
+                .setView(view)
+                .create();
     }
-
-//    @Override
-//    public Dialog onCreateDialog(Bundle savedInstanceState) {
-//        Log.d(TAG,"onCreateDialog");
-//
-//        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-//        // Get the layout inflater
-//        LayoutInflater inflater = getActivity().getLayoutInflater();
-//
-//
-//
-//        // Inflate and set the layout for the dialog
-//        // Pass null as the parent view because its going in the dialog layout
-//        builder.setView(view)
-//                // Add action buttons
-//                .setPositiveButton("Sign in", new DialogInterface.OnClickListener() {
-//
-//                    // TODO validity checks
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int id) {
-//                        if (mCallbacks != null) ;
-//                        mCallbacks.addProblem(titleEditText.getText().toString(),
-//                                descriptionEditText.getText().toString(),
-//                                mThumbnail,
-//                                mFullSizePhoto);
-//                    }
-//                })
-//                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int id) {
-//                        NewProblemDialogFragment.this.getDialog().cancel();
-//                    }
-//                });
-//        return builder.create();
-//    }
-
     @Override
     public void onDestroyView()
     {
