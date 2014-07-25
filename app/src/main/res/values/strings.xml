@@ -18,5 +18,6 @@
     <string name="short_title">Title is too short!</string>
     <string name="no_rating">No rating</string>
     <string name="send">Send</string>
+    <string name="added_by">Added by</string>
 
 </resources>

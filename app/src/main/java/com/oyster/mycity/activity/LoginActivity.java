@@ -8,6 +8,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.facebook.Request;
+import com.facebook.Response;
+import com.facebook.Session;
+import com.facebook.model.GraphUser;
 import com.oyster.mycity.R;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
@@ -49,14 +53,29 @@ public class LoginActivity extends FragmentActivity {
         List<String> permissions = Arrays.asList("public_profile", "user_friends");
         ParseFacebookUtils.logIn(permissions, this, new LogInCallback() {
             @Override
-            public void done(ParseUser user, ParseException err) {
+            public void done(final ParseUser user, ParseException err) {
                 Log.d(TAG, "Facebook login callback");
 
                 if (user == null) {
                     Log.d(TAG,
                             "Uh oh. The user cancelled the Facebook login.");
                 } else {
-                    Log.d(TAG, "Managed to get here");
+                    if (user.isNew()) {
+                        Session session = Session.getActiveSession();
+                        Request.newMeRequest(session, new Request.GraphUserCallback() {
+                            @Override
+                            public void onCompleted(GraphUser facebookUser, Response response) {
+                                try {
+                                    user.put("name", facebookUser.getFirstName() +
+                                            " " + facebookUser.getLastName());
+                                    user.saveInBackground();
+                                } catch (Exception e) {
+                                }
+                            }
+                        }).executeAsync();
+
+                    }
+
                     Intent i = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(i);
                     dialog.dismiss();

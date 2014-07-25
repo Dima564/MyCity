@@ -17,6 +17,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.oyster.mycity.Problem;
 import com.oyster.mycity.ProblemType;
 import com.oyster.mycity.R;
+import com.parse.ParseUser;
 
 /**
  * Created by dima on 25.07.14.
@@ -88,6 +89,7 @@ public class NewProblemDialogFragment extends DialogFragment {
                                     problem.setTitle(getTitle());
                                     problem.setDescription(getDescription());
                                     problem.setType(ProblemType.OTHER);
+                                    problem.setAuthor(ParseUser.getCurrentUser().getString("user"));
                                     problem.save();
                                 }
                             }

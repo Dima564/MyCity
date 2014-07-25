@@ -64,6 +64,7 @@ public class ProblemsListFragment extends ListFragment {
 
     private void queryProblems() {
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Problem");
+        query.include("user");
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> parseObjects, ParseException e) {

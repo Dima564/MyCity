@@ -25,6 +25,7 @@ public class Problem {
     private Bitmap image;
     private int rating;
     private ProblemType type;
+    private String author;
 
     public Problem(String title, String description, LatLng location, Bitmap image, ProblemType type) {
         this.title = title;
@@ -45,6 +46,7 @@ public class Problem {
         problem.type = ProblemType.valueOf(object.getString("type"));
         ParseGeoPoint location = object.getParseGeoPoint("location");
         problem.location = new LatLng(location.getLatitude(),location.getLongitude());
+        problem.author = object.getParseObject("user").getString("name");
 
 
         try {
@@ -56,6 +58,14 @@ public class Problem {
         }
 
         return problem;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public void save() {
