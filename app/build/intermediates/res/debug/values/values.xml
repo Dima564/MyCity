@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- From: file:/home/dima/Workspace/MyCity/app/src/main/res/values/colors.xml -->
+    <eat-comment />
+
+    <color name="bluish">#2EB9FF</color>
     <!-- From: file:/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/MyCity.libraries/facebook/unspecified/res/values/values.xml -->
     <eat-comment />
 
@@ -24,6 +28,11 @@
     <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
     <color name="common_signin_btn_light_text_focused">#FF737373</color>
     <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
+    <!-- From: file:/home/dima/Workspace/MyCity/app/src/main/res/values/colors.xml -->
+    <eat-comment />
+
+    <color name="golden">#DAA520</color>
+    <color name="side_menu">#636363</color>
     <!-- From: file:/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.2.42/res/values/ads_attrs.xml -->
     <eat-comment />
 
@@ -159,6 +168,13 @@
     <dimen name="com_facebook_tooltip_horizontal_padding">10dp</dimen>
     <dimen name="com_facebook_usersettingsfragment_profile_picture_height">64dp</dimen>
     <dimen name="com_facebook_usersettingsfragment_profile_picture_width">64dp</dimen>
+    <!-- From: file:/home/dima/Workspace/MyCity/app/src/main/res/values/dimens.xml -->
+    <eat-comment />
+
+    <dimen name="menu_width">240dp</dimen>
+    <dimen name="shadow_width">5dp</dimen>
+    <!-- From: file:/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/MyCity.libraries/facebook/unspecified/res/values/values.xml -->
+    <eat-comment />
 
     <drawable name="com_facebook_picker_default_separator_color">#33464c59</drawable>
     <!-- From: file:/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/MyCity.libraries/slidingmenu/unspecified/res/values/values.xml -->

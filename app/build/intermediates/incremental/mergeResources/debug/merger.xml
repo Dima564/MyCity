@@ -2150,12 +2150,12 @@
                     msgid="448354684997260580" >"Ta aplikacija ne deluje, če ne posodobite storitev Google Play."
                 </string>
                 <string
-                    name="common_google_play_services_update_button"
-                    msgid="8932944190611227642" >"Posodobi"
-                </string>
-                <string
                     name="common_google_play_services_enable_text"
                     msgid="7627896071867667758" >"Aplikacija ne bo delovala, če ne omogočite storitev Google Play."
+                </string>
+                <string
+                    name="common_google_play_services_update_button"
+                    msgid="8932944190611227642" >"Posodobi"
                 </string>
                 <string
                     name="common_google_play_services_install_text_phone"
@@ -2186,12 +2186,12 @@
                     msgid="6334768798839376943" >"Storitve Google Play"
                 </string>
                 <string
-                    name="common_google_play_services_network_error_title"
-                    msgid="3827284619958211114" >"Omrežna napaka"
-                </string>
-                <string
                     name="auth_client_using_bad_version_title"
                     msgid="2534454398764507874" >"Aplikacija je poskusila uporabiti napačno različico Storitev Google Play."
+                </string>
+                <string
+                    name="common_google_play_services_network_error_title"
+                    msgid="3827284619958211114" >"Omrežna napaka"
                 </string>
                 <string
                     name="auth_client_requested_by_msg"
@@ -2213,12 +2213,12 @@
                     msgid="529078775174559253" >"Omogočite storitve Google Play"
                 </string>
                 <string
-                    name="common_google_play_services_unsupported_date_text"
-                    msgid="4725396522367789365" >"Videti je, da je datum v napravi napačen. Preverite ga."
-                </string>
-                <string
                     name="common_google_play_services_unsupported_text"
                     msgid="3542578567569488671" >"Vaša naprava na podpira storitev Google Play, ki jih potrebujejo nekatere od vaših aplikacij. Za pomoč se obrnite na izdelovalca."
+                </string>
+                <string
+                    name="common_google_play_services_unsupported_date_text"
+                    msgid="4725396522367789365" >"Videti je, da je datum v napravi napačen. Preverite ga."
                 </string>
                 <string
                     name="common_google_play_services_install_title"
@@ -3792,12 +3792,12 @@
                 path="/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.2.42/res/values-zh-rHK/strings.xml"
                 qualifiers="zh-rHK" >
                 <string
-                    name="common_google_play_services_update_button"
-                    msgid="8932944190611227642" >"更新"
-                </string>
-                <string
                     name="common_google_play_services_install_title"
                     msgid="26645092511305524" >"取得 Google Play 服務"
+                </string>
+                <string
+                    name="common_google_play_services_update_button"
+                    msgid="8932944190611227642" >"更新"
                 </string>
                 <string
                     name="common_google_play_services_unsupported_date_text"
@@ -3812,12 +3812,12 @@
                     msgid="6006316683626838685" >"更新 Google Play 服務"
                 </string>
                 <string
-                    name="common_google_play_services_unknown_issue"
-                    msgid="4762332809710093730" >"Google Play 服務出現不明問題。"
-                </string>
-                <string
                     name="common_google_play_services_enable_title"
                     msgid="529078775174559253" >"啟用 Google Play 服務"
+                </string>
+                <string
+                    name="common_google_play_services_unknown_issue"
+                    msgid="4762332809710093730" >"Google Play 服務出現不明問題。"
                 </string>
                 <string
                     name="auth_client_needs_update_title"
@@ -5630,20 +5630,20 @@
                     msgid="448354684997260580" >"Du måste uppdatera Google Play Tjänster innan du kan köra den här appen."
                 </string>
                 <string
-                    name="common_google_play_services_unsupported_date_text"
-                    msgid="4725396522367789365" >"Datumet på enheten verkar inte vara rätt. Kontrollera datumet på enheten."
-                </string>
-                <string
                     name="common_google_play_services_update_button"
                     msgid="8932944190611227642" >"Uppdatera"
                 </string>
                 <string
-                    name="common_google_play_services_enable_button"
-                    msgid="4181637455539816337" >"Aktivera Google Play Tjänster"
+                    name="common_google_play_services_unsupported_date_text"
+                    msgid="4725396522367789365" >"Datumet på enheten verkar inte vara rätt. Kontrollera datumet på enheten."
                 </string>
                 <string
                     name="common_google_play_services_invalid_account_title"
                     msgid="1066672360770936753" >"Ogiltigt konto"
+                </string>
+                <string
+                    name="common_google_play_services_enable_button"
+                    msgid="4181637455539816337" >"Aktivera Google Play Tjänster"
                 </string>
                 <string
                     name="common_google_play_services_enable_text"
@@ -8009,7 +8009,11 @@ center
             <file
                 path="/home/dima/Workspace/MyCity/app/src/main/res/values/dimens.xml"
                 qualifiers="" >
+                <dimen name="shadow_width" >5dp
+                </dimen>
                 <dimen name="activity_horizontal_margin" >16dp
+                </dimen>
+                <dimen name="menu_width" >240dp
                 </dimen>
                 <dimen name="activity_vertical_margin" >16dp
                 </dimen>
@@ -8075,6 +8079,66 @@ center
                 path="/home/dima/Workspace/MyCity/app/src/main/res/drawable/login_button_normal.png"
                 qualifiers=""
                 type="drawable" />
+            <file
+                name="shadow"
+                path="/home/dima/Workspace/MyCity/app/src/main/res/drawable/shadow.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="drawer_shadow"
+                path="/home/dima/Workspace/MyCity/app/src/main/res/drawable/drawer_shadow.9.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                path="/home/dima/Workspace/MyCity/app/src/main/res/values/colors.xml"
+                qualifiers="" >
+                <color name="golden" >#DAA520
+                </color>
+                <color name="bluish" >#2EB9FF
+                </color>
+                <color name="side_menu" >#636363
+                </color>
+            </file>
+            <file
+                name="drawer_shadow"
+                path="/home/dima/Workspace/MyCity/app/src/main/res/drawable-xxhdpi/drawer_shadow.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="menu_item"
+                path="/home/dima/Workspace/MyCity/app/src/main/res/layout/menu_item.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="drawer_shadow"
+                path="/home/dima/Workspace/MyCity/app/src/main/res/drawable-mdpi/drawer_shadow.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="blue_head"
+                path="/home/dima/Workspace/MyCity/app/src/main/res/drawable/blue_head.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="drawer_shadow"
+                path="/home/dima/Workspace/MyCity/app/src/main/res/drawable-hdpi/drawer_shadow.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="shadowright"
+                path="/home/dima/Workspace/MyCity/app/src/main/res/drawable/shadowright.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="drawer_shadow"
+                path="/home/dima/Workspace/MyCity/app/src/main/res/drawable-xhdpi/drawer_shadow.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="menu_left"
+                path="/home/dima/Workspace/MyCity/app/src/main/res/layout/menu_left.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="/home/dima/Workspace/MyCity/app/build/generated/res/rs/debug" />
         <source path="/home/dima/Workspace/MyCity/app/build/generated/res/generated/debug" />
