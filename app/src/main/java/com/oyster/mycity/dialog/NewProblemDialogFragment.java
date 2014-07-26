@@ -9,8 +9,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
@@ -31,6 +34,7 @@ public class NewProblemDialogFragment extends DialogFragment {
     EditText titleEditText;
     EditText descriptionEditText;
     ImageView imageView;
+    Spinner typeSpinner;
 
     NewProblemCallback mCallbacks;
 
@@ -67,6 +71,27 @@ public class NewProblemDialogFragment extends DialogFragment {
         titleEditText = (EditText) view.findViewById(R.id.title_edittext);
         descriptionEditText = (EditText) view.findViewById(R.id.description_edittext);
         imageView = (ImageView) view.findViewById(R.id.image);
+        typeSpinner = (Spinner) view.findViewById(R.id.type_spinner);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
+                R.array.type_array, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        typeSpinner.setAdapter(adapter);
+        typeSpinner.setPrompt(getResources().getString(R.string.choose_solution));
+
+        typeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                problem.setType(ProblemType.values()[position]);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                problem.setType(ProblemType.OTHER);
+            }
+        });
 
         Bitmap bitmap = problem.getImage();
         if (bitmap == null)

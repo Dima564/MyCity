@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- From: file:/home/dima/Workspace/MyCity/app/src/main/res/values/array.xml -->
+    <eat-comment />
+
+    <string-array name="type_array">
+        <item>Other</item>
+        <item>Light</item>
+        <item>Trash bin</item>
+        <item>Bench</item>
+        <item>Repair</item>
+    </string-array>
     <!-- From: file:/home/dima/Workspace/MyCity/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
@@ -207,6 +217,7 @@
     <eat-comment />
 
     <string name="bookmarks">Bookmarks</string>
+    <string name="choose_solution">Choose solution</string>
     <!-- From: file:/home/dima/Workspace/MyCity/build/intermediates/exploded-aar/MyCity.libraries/facebook/unspecified/res/values/values.xml -->
     <eat-comment />
 

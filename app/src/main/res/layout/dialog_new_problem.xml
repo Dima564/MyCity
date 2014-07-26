@@ -27,6 +27,11 @@
         android:fontFamily="sans-serif"
         android:hint="@string/desctiption"/>
 
+    <Spinner
+        android:id="@+id/type_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/choose_solution"/>
 
     <ImageView
         android:id="@+id/image"
