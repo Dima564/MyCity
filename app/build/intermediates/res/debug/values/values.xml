@@ -285,6 +285,7 @@
     <string name="send">Send</string>
     <string name="short_title">Title is too short!</string>
     <string name="title">Title</string>
+    <string name="too_short">Comment is too short!</string>
     <!-- From: file:/home/dima/Workspace/MyCity/app/src/main/res/values/styles.xml -->
     <eat-comment />
 

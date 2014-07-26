@@ -548,7 +548,7 @@ containing a value of this type.
         public static final int take=0x7f02004f;
     }
     public static final class id {
-        public static final int action_add_trouble=0x7f060040;
+        public static final int action_add_trouble=0x7f060043;
         public static final int com_facebook_body_frame=0x7f06002d;
         public static final int com_facebook_button_xout=0x7f06002f;
         public static final int com_facebook_login_activity_progress_bar=0x7f06001d;
@@ -578,18 +578,18 @@ containing a value of this type.
         public static final int comments_container=0x7f060018;
         public static final int container=0x7f06000e;
         public static final int content_frame=0x7f06000d;
-        public static final int description_edittext=0x7f060036;
+        public static final int description_edittext=0x7f060039;
         public static final int dislike_button=0x7f060015;
         public static final int favorite=0x7f060012;
         public static final int fullscreen=0x7f060008;
         public static final int hybrid=0x7f060004;
-        public static final int image=0x7f060038;
-        public static final int item_icon=0x7f060039;
-        public static final int item_title=0x7f06003a;
+        public static final int image=0x7f06003b;
+        public static final int item_icon=0x7f06003c;
+        public static final int item_title=0x7f06003d;
         public static final int large=0x7f06000a;
         public static final int left=0x7f060005;
         public static final int like_button=0x7f060016;
-        public static final int list=0x7f06003e;
+        public static final int list=0x7f060041;
         public static final int loginButton=0x7f06000c;
         public static final int margin=0x7f060007;
         public static final int none=0x7f060000;
@@ -605,14 +605,17 @@ containing a value of this type.
         public static final int right=0x7f060006;
         public static final int satellite=0x7f060002;
         public static final int selected_view=0x7f06000b;
-        public static final int slidingmenumain=0x7f06003f;
+        public static final int slidingmenumain=0x7f060042;
         public static final int small=0x7f060009;
         public static final int terrain=0x7f060003;
-        public static final int title_edittext=0x7f060035;
-        public static final int type_spinner=0x7f060037;
-        public static final int user_first_name=0x7f06003c;
-        public static final int user_icon=0x7f06003b;
-        public static final int user_last_name=0x7f06003d;
+        public static final int text=0x7f060037;
+        public static final int title_edittext=0x7f060038;
+        public static final int type_spinner=0x7f06003a;
+        public static final int user_first_name=0x7f06003f;
+        public static final int user_icon=0x7f06003e;
+        public static final int user_last_name=0x7f060040;
+        public static final int user_name=0x7f060036;
+        public static final int user_picture=0x7f060035;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f080000;
@@ -636,13 +639,14 @@ containing a value of this type.
         public static final int com_facebook_search_bar_layout=0x7f03000f;
         public static final int com_facebook_tooltip_bubble=0x7f030010;
         public static final int com_facebook_usersettingsfragment=0x7f030011;
-        public static final int dialog_new_problem=0x7f030012;
-        public static final int fragment_problem_list=0x7f030013;
-        public static final int infowindow=0x7f030014;
-        public static final int list_item_problem=0x7f030015;
-        public static final int menu_item=0x7f030016;
-        public static final int menu_left=0x7f030017;
-        public static final int slidingmenumain=0x7f030018;
+        public static final int comment=0x7f030012;
+        public static final int dialog_new_problem=0x7f030013;
+        public static final int fragment_problem_list=0x7f030014;
+        public static final int infowindow=0x7f030015;
+        public static final int list_item_problem=0x7f030016;
+        public static final int menu_item=0x7f030017;
+        public static final int menu_left=0x7f030018;
+        public static final int slidingmenumain=0x7f030019;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
@@ -719,6 +723,7 @@ containing a value of this type.
         public static final int send=0x7f090044;
         public static final int short_title=0x7f090045;
         public static final int title=0x7f090046;
+        public static final int too_short=0x7f090047;
     }
     public static final class style {
         /**  Customize your theme here. 

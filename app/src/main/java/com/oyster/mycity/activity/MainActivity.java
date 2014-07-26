@@ -12,6 +12,7 @@ import com.oyster.mycity.Facebook;
 import com.oyster.mycity.LeftMenu;
 import com.oyster.mycity.R;
 import com.oyster.mycity.dialog.NewProblemDialogFragment;
+import com.oyster.mycity.fragment.BookmarksListFragment;
 import com.oyster.mycity.fragment.ProblemsListFragment;
 import com.oyster.mycity.fragment.ProblemsMapFragment;
 
@@ -74,6 +75,8 @@ public class MainActivity extends Activity implements LeftMenu.MenuCallbacks, Ne
                 fragment = new ProblemsListFragment();
                 break;
             case ITEM_BOOKMARKS:
+                fragment = new BookmarksListFragment();
+                break;
             case ITEM_MESSAGES:
             case ITEM_EXIT:
             default:

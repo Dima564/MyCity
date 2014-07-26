@@ -20,5 +20,6 @@
     <string name="send">Send</string>
     <string name="added_by">Added by</string>
     <string name="choose_solution">Choose solution</string>
+    <string name="too_short">Comment is too short!</string>
 
 </resources>
