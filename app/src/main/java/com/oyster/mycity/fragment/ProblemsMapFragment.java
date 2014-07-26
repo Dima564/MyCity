@@ -12,6 +12,7 @@ import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -72,7 +73,7 @@ public class ProblemsMapFragment extends MapFragment{
                 for (int i = 0; i < mProblems.size(); i++) {
                     if (mProblems.get(i).getLocation().equals(marker.getPosition())) {
                         Intent intent = new Intent(getActivity(), ProblemDetailsActivity.class);
-                        intent.putExtra("problem_number",i);
+                        intent.putExtra("problem_number", i);
                         startActivity(intent);
                         break;
                     }
@@ -103,6 +104,24 @@ public class ProblemsMapFragment extends MapFragment{
             MarkerOptions marker = new MarkerOptions();
             marker.title(p.getTitle());
             marker.position(p.getLocation());
+            int resourceId = -1;
+            switch (p.getType()){
+                case BENCH:
+                    resourceId = R.drawable.bench;
+                    break;
+                case LIGHT:
+                    resourceId = R.drawable.streetlight;
+                    break;
+                case TRASH_BIN:
+                    resourceId = R.drawable.trashcan;
+                    break;
+                case REPAIR:
+                    resourceId = R.drawable.repair;
+                    break;
+            }
+
+            if (resourceId != -1)
+                marker.icon(BitmapDescriptorFactory.fromResource(resourceId));
             mapView.addMarker(marker);
 
         }

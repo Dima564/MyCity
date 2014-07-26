@@ -3,6 +3,8 @@ package com.oyster.mycity.activity;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +28,7 @@ import com.oyster.mycity.R;
 import com.parse.FindCallback;
 import com.parse.GetCallback;
 import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
@@ -97,6 +101,11 @@ public class ProblemDetailsActivity extends Activity {
         dislikeButton = (ImageButton) findViewById(R.id.dislike_button);
         favouriteButton = (ImageButton) findViewById(R.id.favorite);
 
+
+        InputMethodManager imm = (InputMethodManager)getSystemService(
+                Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(commentEditText.getWindowToken(), 0);
+
         postCommentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,6 +128,11 @@ public class ProblemDetailsActivity extends Activity {
                     });
                     mComments.add(comment);
                     mCommentsAdapter.notifyDataSetChanged();
+                    commentEditText.setText("");
+
+                    InputMethodManager imm = (InputMethodManager)getSystemService(
+                            Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(commentEditText.getWindowToken(), 0);
                 }
                 else
                     Toast.makeText(ProblemDetailsActivity.this,
@@ -346,16 +360,29 @@ public class ProblemDetailsActivity extends Activity {
                 convertView = inflater.inflate(R.layout.comment,null);
             }
 
-//            ImageView userImageView = (ImageView) convertView.findViewById(R.id.user_picture);
+            final ImageView userImageView = (ImageView) convertView.findViewById(R.id.user_picture);
             TextView textView = (TextView) convertView.findViewById(R.id.text);
             final TextView userNameTextView = (TextView) convertView.findViewById(R.id.user_name);
 
-//            userImageView = mParseObjectProblem.get("user").
+
 
             mComments.get(position).getParseObject("user").fetchIfNeededInBackground(new GetCallback<ParseObject>() {
                 @Override
                 public void done(ParseObject parseObject, ParseException e) {
                     userNameTextView.setText(parseObject.getString("name"));
+
+
+                    try {
+                        ParseFile image = parseObject.getParseFile("picture");
+                        byte[] data = image.getData();
+                        Bitmap picture = BitmapFactory.decodeByteArray(data, 0, data.length);
+                        userImageView.setImageBitmap(picture);
+
+                    } catch (Exception ex) {
+                        Log.e(TAG,"Unable to cast file to bitmap");
+                    }
+
+
                 }
             });
             textView.setText(mComments.get(position).getString("text"));

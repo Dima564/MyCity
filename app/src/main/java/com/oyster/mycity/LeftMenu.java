@@ -20,7 +20,8 @@ public class LeftMenu {
     public static final int ITEM_PROBLEMS = 1;
     public static final int ITEM_BOOKMARKS = 2;
     public static final int ITEM_MESSAGES = 3;
-    public static final int ITEM_EXIT = 4;
+    public static final int ITEM_MY_PLACES = 4;
+    public static final int ITEM_EXIT = 5;
     private static final String TAG = "LeftMenu";
 
     SlidingMenu menu;
@@ -98,15 +99,19 @@ public class LeftMenu {
                     break;
                 case ITEM_PROBLEMS:
                     title.setText(R.string.problems);
-                    icon.setImageResource(android.R.drawable.ic_menu_myplaces);
+                    icon.setImageResource(android.R.drawable.ic_lock_idle_low_battery);
                     break;
                 case ITEM_BOOKMARKS:
                     title.setText(R.string.bookmarks);
-                    icon.setImageResource(android.R.drawable.star_on);
+                    icon.setImageResource(android.R.drawable.star_big_off);
                     break;
                 case ITEM_MESSAGES:
                     title.setText(R.string.government_messages);
                     icon.setImageResource(android.R.drawable.ic_dialog_map);
+                    break;
+                case ITEM_MY_PLACES:
+                    title.setText(R.string.my_places);
+                    icon.setImageResource(android.R.drawable.ic_menu_myplaces);
                     break;
                 case ITEM_EXIT:
                     title.setText(R.string.exit);
@@ -120,7 +125,7 @@ public class LeftMenu {
 
         @Override
         public int getCount() {
-            return 5;
+            return 6;
         }
     }
 

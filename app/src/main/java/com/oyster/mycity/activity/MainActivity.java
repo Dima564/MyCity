@@ -13,13 +13,17 @@ import com.oyster.mycity.LeftMenu;
 import com.oyster.mycity.R;
 import com.oyster.mycity.dialog.NewProblemDialogFragment;
 import com.oyster.mycity.fragment.BookmarksListFragment;
+import com.oyster.mycity.fragment.MyPlacesFragment;
 import com.oyster.mycity.fragment.ProblemsListFragment;
 import com.oyster.mycity.fragment.ProblemsMapFragment;
+import com.parse.ParseUser;
+import com.parse.PushService;
 
 import static com.oyster.mycity.LeftMenu.ITEM_BOOKMARKS;
 import static com.oyster.mycity.LeftMenu.ITEM_EXIT;
 import static com.oyster.mycity.LeftMenu.ITEM_MAP;
 import static com.oyster.mycity.LeftMenu.ITEM_MESSAGES;
+import static com.oyster.mycity.LeftMenu.ITEM_MY_PLACES;
 import static com.oyster.mycity.LeftMenu.ITEM_PROBLEMS;
 
 
@@ -36,6 +40,10 @@ public class MainActivity extends Activity implements LeftMenu.MenuCallbacks, Ne
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String userName = ParseUser.getCurrentUser().getString("name");
+        String channel = userName.replace(" ","_");
+        PushService.subscribe(this, channel, MainActivity.class);
 
         if (savedInstanceState == null)
         getFragmentManager().beginTransaction().add(R.id.content_frame, new ProblemsMapFragment())
@@ -76,6 +84,9 @@ public class MainActivity extends Activity implements LeftMenu.MenuCallbacks, Ne
                 break;
             case ITEM_BOOKMARKS:
                 fragment = new BookmarksListFragment();
+                break;
+            case ITEM_MY_PLACES:
+                fragment = new MyPlacesFragment();
                 break;
             case ITEM_MESSAGES:
             case ITEM_EXIT:
