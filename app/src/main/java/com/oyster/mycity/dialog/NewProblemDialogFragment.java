@@ -38,7 +38,7 @@ public class NewProblemDialogFragment extends DialogFragment {
 
     NewProblemCallback mCallbacks;
 
-    private Problem problem = new Problem();
+    private Problem mProblem = new Problem();
 
 
 
@@ -54,12 +54,12 @@ public class NewProblemDialogFragment extends DialogFragment {
     }
 
     public void setLocation(LatLng location) {
-        problem.setLocation(location);
+        mProblem.setLocation(location);
     }
 
     public void setThumbnail(Bitmap image) {
         Log.d(TAG, "setThumbnail : " + this);
-        problem.setImage(image);
+        mProblem.setImage(image);
         if (imageView != null)
             imageView.setImageBitmap(image);
     }
@@ -84,16 +84,18 @@ public class NewProblemDialogFragment extends DialogFragment {
         typeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                problem.setType(ProblemType.values()[position]);
+                Toast.makeText(getActivity(),
+                        (ProblemType.values()[position]).toString(),Toast.LENGTH_SHORT).show();
+                mProblem.setType(ProblemType.values()[position]);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                problem.setType(ProblemType.OTHER);
+                mProblem.setType(ProblemType.OTHER);
             }
         });
 
-        Bitmap bitmap = problem.getImage();
+        Bitmap bitmap = mProblem.getImage();
         if (bitmap == null)
             imageView.setImageBitmap(bitmap);
 
@@ -111,11 +113,10 @@ public class NewProblemDialogFragment extends DialogFragment {
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 if (validateData()) {
-                                    problem.setTitle(getTitle());
-                                    problem.setDescription(getDescription());
-                                    problem.setType(ProblemType.OTHER);
-                                    problem.setAuthor(ParseUser.getCurrentUser().getString("user"));
-                                    problem.save();
+                                    mProblem.setTitle(getTitle());
+                                    mProblem.setDescription(getDescription());
+                                    mProblem.setAuthor(ParseUser.getCurrentUser().getString("user"));
+                                    mProblem.save();
                                 }
                             }
                         }

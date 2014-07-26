@@ -12,6 +12,7 @@ import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -35,16 +36,18 @@ public class ProblemsMapFragment extends MapFragment{
     GoogleMap mapView;
     List<Problem> mProblems = new ArrayList<>();
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setRetainInstance(true);
+    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mapView = getMap();
-        CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(50.4293817, 30.5316606));
-        CameraUpdate zoom = CameraUpdateFactory.zoomTo(11);
+        CameraUpdate center = CameraUpdateFactory.newCameraPosition(new CameraPosition(new LatLng(46.459972, 30.7117875),11,0,0));
         mapView.moveCamera(center);
-        mapView.animateCamera(zoom);
-
 
         mapView.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
@@ -71,7 +74,6 @@ public class ProblemsMapFragment extends MapFragment{
                         Intent intent = new Intent(getActivity(), ProblemDetailsActivity.class);
                         intent.putExtra("problem_number",i);
                         startActivity(intent);
-                        getActivity().finish();
                         break;
                     }
                 }

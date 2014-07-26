@@ -92,7 +92,9 @@ public class Problem {
         this.rating = rating;
     }
 
+
     public void setType(ProblemType type) {
+        Log.d(TAG,type.toString());
         this.type = type;
     }
 
@@ -136,11 +138,13 @@ public class Problem {
 
 
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            problem.image.compress(Bitmap.CompressFormat.PNG, 100, stream);
-            byte[] data = stream.toByteArray();
-            ParseFile image = new ParseFile(data);
+            if (problem.image != null) {
+                problem.image.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                byte[] data = stream.toByteArray();
+                ParseFile image = new ParseFile(data);
 
-            object.put("image",image);
+                object.put("image", image);
+            }
 
             try {
                 object.save();

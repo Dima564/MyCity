@@ -14,23 +14,37 @@
             <RelativeLayout
                 android:id="@+id/container"
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
+                android:layout_height="wrap_content"
                 android:padding="10dp">
                 <ImageView
                     android:id="@+id/problem_image"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/take"/>
+                    android:src="@drawable/take"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="centerCrop"/>
                 <RelativeLayout
+                    android:id="@+id/problem_info"
                     android:layout_toRightOf="@id/problem_image"
                     android:layout_width="match_parent"
-                    android:layout_height="160dp">
+                    android:layout_height="wrap_content"
+                    android:minHeight="160dp">
                     <TextView
                         android:id="@+id/problem_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="30sp"
                         android:textStyle="bold"/>
+
+                    <ImageView
+                        android:id="@+id/favorite"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_toRightOf="@id/problem_title"
+                        android:src="@android:drawable/btn_star_big_off"/>
+
 
                     <TextView
                         android:id="@+id/problem_description"
@@ -41,21 +55,52 @@
                 </RelativeLayout>
 
 
-                <TextView
-                    android:id="@+id/problem_author"
-                    android:layout_below="@id/problem_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/problem_rating"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="30sp"/>
-            </RelativeLayout>
+                <RelativeLayout
+                    android:layout_below="@id/problem_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/problem_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:textSize="33sp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/problem_rating"
+                        android:layout_marginRight="10dp">
+                        <ImageButton
+                            android:id="@+id/dislike_button"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:background="@drawable/dislike"/>
+                        <ImageButton
+                            android:id="@+id/like_button"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="20dp"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:background="@drawable/like"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/problem_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/problem_rating"/>
+
+                    </RelativeLayout>
+
+                            </RelativeLayout>
 
             <ListView
                 android:id="@+id/comments_container"
